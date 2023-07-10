@@ -6,11 +6,13 @@ class EMAILDELIVERYDAO {
      async sendEmail(from, to, subject, body) {
        const transporter = nodemailer.createTransport({
          service: 'Gmail',
+        
          auth: {
            user: "zainali.socialb@gmail.com",
            pass: 'babzdxxvmrsxvfzy',
-         },
-       });
+        
+        },
+      });
    
        const mailOptions = {
          from,
@@ -44,7 +46,7 @@ class EMAILDELIVERYDAO {
          },
        });
        return emaildelivery;
-     }
-   }
+      }
+    }
    
 module.exports = new EMAILDELIVERYDAO();
